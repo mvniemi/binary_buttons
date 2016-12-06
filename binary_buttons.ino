@@ -32,10 +32,8 @@ byte readSequential(){
 }
 
 byte readDirect(){
-
-  
+  //first pin we're using is 2, shift over by 2
   byte buttonId =  PIND >> 2;
-
   return buttonId;
 }
 
