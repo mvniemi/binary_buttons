@@ -13,7 +13,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   Serial.println(readSequential());
   Serial.println(readDirect());
   delay(100);
@@ -21,7 +20,7 @@ void loop() {
 
 byte readSequential(){
   byte buttonId;
-  for(int i=2; i<4; i++){
+  for(int i=2; i<5; i++){
     if( digitalRead(i) == 1){
       //We will "add" the value of our pin to the byte. The << shifts it to the right bit, indexed by out loop
       buttonId = buttonId | (1 << (i-2));
